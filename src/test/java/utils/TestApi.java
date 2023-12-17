@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class api {
+public class TestApi {
     @Test
     @DisplayName("Validate create user")
-    public void testValidateCreateUser() {
+    public void ValidateCreateUserTest() {
         baseURI = "https://reqres.in/api";
         basePath = "/users";
 
