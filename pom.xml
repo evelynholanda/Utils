@@ -13,10 +13,10 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-
         <junit.version>5.9.0</junit.version>
         <restassured.version>5.3.0</restassured.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -30,6 +30,13 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.0</version>
             <scope>test</scope>
         </dependency>
 
