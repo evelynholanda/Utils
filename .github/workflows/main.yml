@@ -1,4 +1,7 @@
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -6,7 +9,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.Mypass }}
+          fetch-depth: 0
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
