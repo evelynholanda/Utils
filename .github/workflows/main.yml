@@ -7,6 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Remove existing submodules
+        run: |
+          git submodule deinit -f .
+          git rm -f .gitmodules
+          rm -rf .git/modules
+        continue-on-error: true
+
       - name: Checkout Repository with Submodules
         uses: actions/checkout@v3
         with:
@@ -20,3 +27,5 @@ jobs:
 
       - name: Build with Maven
         run: mvn verify --batch-mode --fail-at-end surefire-report:report
+
+
