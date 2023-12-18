@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class ApiTeste {
+public class ApiTest {
     @Test
     @DisplayName("Validate create user")
     public void testValidateCreateUser() {
